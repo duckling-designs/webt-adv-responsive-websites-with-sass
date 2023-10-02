@@ -1,0 +1,31 @@
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    font-family: "Arial Black";
+    font-size: 300%;
+    margin-left: 50px;
+}
+
+h2 {
+    font-family: Arial;
+    font-size: 150%;
+    margin-left: 10px;
+    margin-bottom: -10px;
+}
+
+p {
+    font-family: Arial;
+    margin-left: 10px;
+}
+
+.flex-container {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 30px;
+
+}
