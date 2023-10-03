@@ -4,7 +4,7 @@ namespace DucklingDesigns\ObjectOrientedPhp;
 
 abstract class AbstractVideo implements VideoInterface {
     private $name;
-    private $source;
+    protected $source;
 
     public function __construct($name, $source) {
         $this->name = $name;
@@ -21,4 +21,14 @@ abstract class AbstractVideo implements VideoInterface {
 
     // The getEmbedCode method is declared as abstract
     abstract public function getEmbedCode(): string;
+
+    public function __toString() {
+        return <<< HTML
+<div class="video-entry">
+    <h2>$this->name</h2>
+    <p>Origin: $this->source</p>
+    {$this->getEmbedCode()}
+</div>
+HTML;
+    }
 }

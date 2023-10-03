@@ -1,8 +1,10 @@
 <?php
+
 namespace DucklingDesigns\ObjectOrientedPhp;
 require 'vendor/autoload.php';
 
-// Usage example
+$youtubeVideo = new YouTubeVideo("What If The World Went Vegetarian?", 'https://www.youtube.com/watch?v=ANUoAdXfA60');
+
 $htmlOutput = <<< HTML
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +17,7 @@ $htmlOutput = <<< HTML
 
 <h1>FoodTube</h1>
 <div class="flex-container">
-
+$youtubeVideo
 </div>
 </body>
 </html>
