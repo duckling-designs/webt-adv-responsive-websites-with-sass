@@ -2,11 +2,22 @@
 namespace DucklingDesigns\ObjectOrientedPhp;
 require 'vendor/autoload.php';
 
-//TODO: remove example
-
 // Usage example
-$youtubeVideo = new YouTubeVideo("What If The World Went Vegetarian?", "YouTube", '<iframe src="https://www.youtube.com/embed/ANUoAdXfA60?autoplay=1"></iframe>');
+$htmlOutput = <<< HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>FoodTube</title>
+</head>
+<body>
 
-echo "Video Name: " . $youtubeVideo->getName() . "\n";
-echo "Video Source: " . $youtubeVideo->getSource() . "\n";
-echo "Embed Code: " . $youtubeVideo->getEmbedCode() . "\n";
+<h1>FoodTube</h1>
+<div class="flex-container">
+
+</div>
+</body>
+</html>
+HTML;
+echo $htmlOutput;
