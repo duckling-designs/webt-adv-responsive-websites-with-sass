@@ -3,8 +3,8 @@
 namespace DucklingDesigns\ObjectOrientedPhp;
 
 abstract class AbstractVideo implements VideoInterface {
-    private $name;
-    protected $source;
+    private string $name;
+    private string $source;
 
     public function __construct($name, $source) {
         $this->name = $name;
