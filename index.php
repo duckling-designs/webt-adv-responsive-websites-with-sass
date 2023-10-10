@@ -30,6 +30,10 @@ $youtubeVideo4
 $youtubeVideo5
 $youtubeVideo6
 $vimeoVideo
+$vimeoVideo
+$vimeoVideo
+$vimeoVideo
+$vimeoVideo
 </div>
 </body>
 </html>
