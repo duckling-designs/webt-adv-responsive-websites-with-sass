@@ -4,7 +4,6 @@ namespace DucklingDesigns\ObjectOrientedPhp;
 
 class YouTubeVideo extends AbstractVideo
 {
-    private string $embedCode;
     private string $youtubeId;
 
     public function __construct($name, $url)
@@ -16,17 +15,15 @@ class YouTubeVideo extends AbstractVideo
         } else {
             $this->youtubeId = substr($url, strrpos($url, "/") + 1);
         }
+    }
 
-        $this->embedCode = <<< HTML
+    public function getEmbedCode(): string
+    {
+        return <<< HTML
 <iframe width="320" height="180" src="https://www.youtube.com/embed/$this->youtubeId"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
 HTML;
-    }
-
-    public function getEmbedCode(): string
-    {
-        return $this->embedCode;
     }
 }
