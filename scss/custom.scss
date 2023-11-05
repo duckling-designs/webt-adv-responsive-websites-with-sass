@@ -6,3 +6,35 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
+$primary-color: var(--bs-green);
+$video-title-font-size: 16pt;
+$video-origin-font-size: 12pt;
+
+@mixin truncate-text() {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+h1 {
+  font-family: "Arial Black", monospace;
+  color: $primary-color;
+}
+
+h2 {
+  font-size: $video-title-font-size;
+  width: inherit;
+  @include truncate-text();
+}
+
+h3 {
+  font-size: $video-origin-font-size;
+  width: inherit;
+}
+
+.video-entry {
+  max-width: 320px;
+  max-height: 320px;
+  margin: 10px;
+}

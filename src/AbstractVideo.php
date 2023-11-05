@@ -24,10 +24,10 @@ abstract class AbstractVideo implements VideoInterface {
 
     public function __toString() {
         return <<< HTML
-<div class="video-entry">
-    <h2>$this->name</h2>
-    <p>Origin: $this->source</p>
+<div class="col-md video-entry">
     {$this->getEmbedCode()}
+    <h3>Origin: $this->source</h3>
+    <h2>$this->name</h2>
 </div>
 HTML;
     }
