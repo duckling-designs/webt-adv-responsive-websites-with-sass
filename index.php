@@ -14,40 +14,32 @@ $videoString = "";
 foreach ($videos as $video){
     $videoString .= $video;
 }
+
 $htmlOutput = <<< HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <link rel="stylesheet" href="scss/custom.css">
+    <script type="module" src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <title>FoodTube</title>
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-    <div class="container justify-content-end">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Account</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Settings</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container justify-content-end">
+<!--    <a class="navbar-brand" href="#">FoodTube</a>-->
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link disabled" aria-disabled="true" href="#">Account</a>
+        <a class="nav-link" href="#">Settings</a>
+        <a class="nav-link" href="#">Login</a>
+      </div>
     </div>
+  </div>
 </nav>
 
 <main role="main" class="container">
